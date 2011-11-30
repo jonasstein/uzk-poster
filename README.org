@@ -1,0 +1,16 @@
+* Motivation
+scientists like LaTeX and often create DIN A0 poster to show their latest
+development. This project should support international students and scientists
+to create their poster most efficient with PDFLaTeX
+
+* Toolbox (available tools)
+ - git
+ - pdflatex
+ - TikZ
+ - make
+
+* Roadmap
+ - prepare a dummy logo of university of cologne 
+   (the official logo may not be included here for legal reasons)
+ - create a docment class
+ - create a short howto/example
