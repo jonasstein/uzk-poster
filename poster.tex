@@ -6,6 +6,7 @@
 \ptextbox{#1}{#2}{\BODY}%
 }
 
+
 \include{preamble}
 
 \usepackage[a0paper,top=10cm, left=1cm, right=1cm]{geometry}
@@ -19,7 +20,7 @@
 \node[bcgsbox, draw=white, fill=bcgsblue] (title){%
     \begin{minipage}{0.9\textwidth}
       \parbox[t]{0.9\textwidth}{%
-      \parbox[t]{9cm}{\vspace{0pt}   \includegraphics[height=8cm]{unikoeln-logo2}}
+      \parbox[t]{9cm}{\vspace{0pt}   \includegraphics[height=8cm]{gfx/dummy-logo-a}}
     \hspace{1cm}
     \parbox[t]{50cm}{%
         \textcolor{white}{\raggedright\Huge\textbf{\MyTitle}
@@ -27,7 +28,7 @@
           \MyAuthors\\
           {\small \MyAffiliations \\}}}
 }
-     \parbox[t]{8cm}{\vspace{0pt} \includegraphics[height=8cm]{Logo-SFB-608}}
+     \parbox[t]{8cm}{\vspace{0pt} \includegraphics[height=8cm]{gfx/dummy-logo-a}}
     \end{minipage}
 };
 
@@ -38,9 +39,9 @@
 \begin{tikzpicture}[node distance=2cm and 1cm]
 \node[bcgsbox, draw=white, fill=bcgsblue] (title){%
     \begin{minipage}{0.9\textwidth}
-\parbox[t]{0.2\textwidth}{\includegraphics[height=8cm]{unikoeln-logo2}}
+\parbox[t]{0.2\textwidth}{\includegraphics[height=8cm]{gfx/dummy-logo-a}}
 \parbox[t]{0.5\textwidth}{Titeltext}
-\parbox[t]{0.2\textwidth}{\hfill\includegraphics[height=8cm]{unikoeln-logo2}}
+\parbox[t]{0.2\textwidth}{\hfill\includegraphics[height=8cm]{gfx/dummy-logo-a}}
 \end{minipage}
 };
 
