@@ -14,3 +14,7 @@ to create their poster most efficient with PDFLaTeX
    (the official logo may not be included here for legal reasons)
  - create a docment class
  - create a short howto/example
+* how to use on linux systems
+ - get the code: git clone git@github.com:jonasstein/uzk-poster.git
+ - edit poster.tex with your favourite editor
+ - run: make view
