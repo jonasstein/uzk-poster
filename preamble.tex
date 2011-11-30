@@ -1,0 +1,83 @@
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{anyfontsize}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\definecolor{background}{rgb}{0.78,0.80,0.90}
+\definecolor{bcgsred}{rgb}{0.71,0.18,0.18}
+\definecolor{bcgsblue}{rgb}{0.09,0.19,0.35}
+\definecolor{plotblue}{rgb}{0.18,0.18,0.71}
+\definecolor{plotgreen}{rgb}{0.18,0.71,0.18}
+
+\pagecolor{background}
+
+\tikzstyle{bcgsbox} = [draw=bcgsblue, fill=white, line width=3pt,
+rounded corners=1cm, inner sep=1.5cm, inner ysep=2cm]
+
+\tikzstyle{bcgsreset} = [draw=black, fill=none, thin, sharp corners,
+inner sep=0.3333em, node distance=1cm and 1cm]
+
+\tikzstyle{bib} = [inner sep=0.1cm, inner ysep=0.1cm]
+
+\newcommand{\MyTitle}{Electromagnetic switching of multiferroics}
+\newcommand{\MyAuthors}{M. Baum$^1$, J. Stein$^1$, Th. Finger$^1$, N. Qureshi$^1$, J. Leist$^3$, S. Holbein$^1$, P. Becker-Bohatý$^2$, L. Bohatý$^2$, G. Eckold$^3$, M. Braden$^1$}
+\newcommand{\MyAffiliations}{$^1$ II. Physikalisches Institut, Universität zu Köln\\
+$^2$ Institut für Kristallographie, Universität zu Köln\\
+$^3$ Institut für Physikalische Chemie, Universität Göttingen}
+
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\makeatletter %% crucial for the following to work! ...
+\renewcommand{\section}{\@startsection
+  {section}                          % the name
+  {1}                                % the level
+  {0mm}                              % the indent
+  {-0\baselineskip}                  % the beforeskip
+  {.5\baselineskip}                 % the afterskip
+  {\normalfont\LARGE\bfseries\color{bcgsred}}} % the style
+\makeatother
+
+\makeatletter %% crucial for the following to work! ...
+\renewcommand{\subsection}{\@startsection
+  {subsection}                          % the name
+  {2}                                % the level
+  {0mm}                              % the indent
+  {0.6\baselineskip}                  % the beforeskip
+  {0.25\baselineskip}     % the afterskip
+  {\normalfont\Large\bfseries\color{bcgsblue}}} % the style
+\makeatother
+
+\renewcommand{\normalsize}{\large}
+
+\newcommand{\ptextbox}[3]{%
+  \node[bcgsbox, #2] (#1){%
+    \begin{minipage}{0.42\textwidth}%
+      #3
+    \end{minipage}
+  };
+}
+
+\newcommand{\ptextboxbib}[3]{%
+  \node[bib, #2] (#1){%
+    \begin{minipage}{0.45\textwidth}%
+      #3
+    \end{minipage}
+  };
+}
+
+\addtolength{\leftmargini}{4mm} % first-level list leftmargin
+\addtolength{\labelsep}{4mm}
+\addtolength{\leftmarginii}{6mm} % second-level list leftmargin
+
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "poster"
+%%% End: 
