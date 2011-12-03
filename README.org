@@ -18,3 +18,5 @@ to create their poster most efficient with PDFLaTeX
  - get the code: git clone git@github.com:jonasstein/uzk-poster.git
  - edit poster.tex with your favourite editor
  - run: make view
+* Links
+ - http://solstice.github.com/uzk-theme/ 
