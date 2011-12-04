@@ -20,3 +20,4 @@ to create their poster most efficient with PDFLaTeX
  - run: make view
 * Links
  - http://solstice.github.com/uzk-theme/ 
+ - similar packages: sciposter, a0poster

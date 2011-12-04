@@ -1,86 +1,44 @@
 \documentclass[portrait]{a0poster}
+%\documentclass{minimal}
+%\usepackage[a0paper,left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+
 % aus a0poster die interessanten Teile kopieren und forken
 \RequirePackage{environ}
 
-\NewEnviron{Feld}[2]{%
+\NewEnviron{MyBlock}[2]{%
 \ptextbox{#1}{#2}{\BODY}%
 }
 
 
+
 \include{preamble}
-
-\usepackage[a0paper,top=10cm, left=1cm, right=1cm]{geometry}
-
+\usepackage[english]{babel} % most posters will be in english
+\usepackage[a0paper,top=3cm, left=1cm, right=1cm]{geometry}
+\usepackage{color}
+\usepackage{blindtext}
 
 \begin{document}
-
-\iffalse
 \begin{tikzpicture}[node distance=2cm and 1cm]
 
-\node[bcgsbox, draw=white, fill=bcgsblue] (title){%
-    \begin{minipage}{0.9\textwidth}
-      \parbox[t]{0.9\textwidth}{%
-      \parbox[t]{9cm}{\vspace{0pt}   \includegraphics[height=8cm]{gfx/dummy-logo-a}}
-    \hspace{1cm}
-    \parbox[t]{50cm}{%
-        \textcolor{white}{\raggedright\Huge\textbf{\MyTitle}
-          \Large \\[1ex]
-          \MyAuthors\\
-          {\small \MyAffiliations \\}}}
-}
-     \parbox[t]{8cm}{\vspace{0pt} \includegraphics[height=8cm]{gfx/dummy-logo-a}}
-    \end{minipage}
-};
-
-\end{tikzpicture}
-\fi
-
-
-\begin{tikzpicture}[node distance=2cm and 1cm]
 \node[bcgsbox, draw=white, fill=bcgsblue] (title){%
     \begin{minipage}{0.9\textwidth}
 \parbox[t]{0.2\textwidth}{\includegraphics[height=8cm]{gfx/dummy-logo-a}}
-\parbox[t]{0.5\textwidth}{Titeltext}
+\parbox[t]{0.5\textwidth} {Titeltext} % <--- should be white
 \parbox[t]{0.2\textwidth}{\hfill\includegraphics[height=8cm]{gfx/dummy-logo-a}}
 \end{minipage}
 };
 
-\begin{Feld}{motivation}{below left=of title.south}
+\begin{MyBlock}{motivation}{below left=of title.south}
   \section{Motivation}
-  \begin{itemize}
-  \item bla
-  \end{itemize}
-\end{Feld}
+ \blindtext
+\end{MyBlock}
 
-\ptextbox{boxtwo}{below=of motivation}{
-  \section{Magnetic structure}
-  \subsection{subtitle}
-  \begin{equation*}
-    1 + 2 = 3
-  \end{equation*}
-  As given in~\cite{Gen99}.
-}
 
-\ptextbox{results}{below right=of title.south}{
-  \section{Results}
-\subsection{subtitle}
-}
+\begin{MyBlock}{motivation}{below right=of title.south}
+  \section{Facts}
+ \blinditemize
+\end{MyBlock}
 
-\ptextbox{outlook}{below=of results}{
-\section{Conclusion}
-\begin{itemize}
-\item bla
-\end{itemize}
-}
-
-\ptextboxbib{boxbib}{below=of boxtwo}{
-  \large
-  \begin{thebibliography}{M}
-  \bibitem{Gen99} \textbf{Implausible Results} A.~Genius, Journal of
-    Research \textbf{99} 99 (2099) 999999
-  \end{thebibliography}
- Poster für Nobelpreisverleihung 2020 vom \today.
-}
 
 \end{tikzpicture}
 \end{document}
