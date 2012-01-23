@@ -1,29 +1,57 @@
 \documentclass[portrait]{a0poster}
 %\documentclass{minimal}
-%\usepackage[a0paper,left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
 
-% aus a0poster die interessanten Teile kopieren und forken
+% Vorschlag vom Tex-Ws: aus a0poster die interessanten Teile kopieren und anpassen
+
 \RequirePackage{environ}
 
-\NewEnviron{MyBlock}[2]{%
-\ptextbox{#1}{#2}{\BODY}%
-}
 
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{anyfontsize}
+\usepackage{footmisc}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
 
-
-\include{preamble}
+%\include{preamble}
 \usepackage[english]{babel} % most posters will be in english
-\usepackage[a0paper,top=3cm, left=1cm, right=1cm]{geometry}
+\usepackage[a0paper, top=3cm, left=1cm, right=1cm, bottom=1cm]{geometry}
 \usepackage{color}
 \usepackage{blindtext}
+
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{background}{rgb}{0.78,0.80,0.90}
+\definecolor{uzkred}{rgb}{0.71,0.18,0.18}
+\definecolor{matnatblue}{rgb}{0.09,0.19,0.35}
+\pagecolor{background}
+
+\tikzstyle{textbox} = [draw=matnatblue, fill=white, line width=3pt,
+rounded corners=1cm, inner sep=1.5cm, inner ysep=2cm]
+
+\tikzstyle{titlebox} = [draw=matnatblue, fill=white, line width=3pt,
+rounded corners=1cm, inner sep=1.5cm, inner ysep=2cm]
+
+\NewEnviron{MyBlock}[2]{%
+\node[textbox, #2] (#1){%
+    \begin{minipage}{0.42\textwidth}%
+      \BODY%
+    \end{minipage}
+  };
+}
 
 \begin{document}
 \begin{tikzpicture}[node distance=2cm and 1cm]
 
-\node[bcgsbox, draw=white, fill=bcgsblue] (title){%
+\node[titlebox, draw=white, fill=matnatblue] (title){%
     \begin{minipage}{0.9\textwidth}
 \parbox[t]{0.2\textwidth}{\includegraphics[height=8cm]{gfx/dummy-logo-a}}
-\parbox[t]{0.5\textwidth} {Titeltext} % <--- should be white
+\parbox[t]{0.5\textwidth} {\textcolor{white}{\Huge{I am the Title}\\
+Ali Baba\footnote{Uni Europa \label{u1}}
+Franz Beckenbauer\footref{u1}
+  }}
 \parbox[t]{0.2\textwidth}{\hfill\includegraphics[height=8cm]{gfx/dummy-logo-a}}
 \end{minipage}
 };
