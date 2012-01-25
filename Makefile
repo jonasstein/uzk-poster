@@ -19,7 +19,7 @@ pdf : $(latexfile).pdf
 
 
 view : $(latexfile).pdf
-	grep "Output written on" $(latexfile).log && \
+	grep -q "Output written on" $(latexfile).log && \
 	acroread $(latexfile).pdf 
 
 clean : 
