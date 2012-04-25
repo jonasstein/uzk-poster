@@ -1,7 +1,7 @@
 * Motivation
 scientists like LaTeX and often create DIN A0 poster to show their latest
 development. This project should support international students and scientists
-to create their poster most efficient with PDFLaTeX
+to create their poster most efficiently with PDFLaTeX
 
 * Toolbox (available tools)
  - git
@@ -13,7 +13,7 @@ to create their poster most efficient with PDFLaTeX
  - DONE prepare a dummy logo of university of cologne 
    (the official logo may not be included here for legal reasons) 
 
- - TODO create a docment class
+ - TODO create a document class
  - TODO create a short howto/example
 * how to use on linux systems
  - get the code: git clone git@github.com:jonasstein/uzk-poster.git
